@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "devDependencies": {
+    "turbo": "1.1.5",
+    "eslint": "^7.32.0",
+    "eslint-config-custom": "*",
+    "prettier": "^2.5.1"
+  }
+}

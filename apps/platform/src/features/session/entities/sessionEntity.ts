@@ -1,6 +1,6 @@
 import { User } from "../../users/domain/userType";
 
-export interface Session {
+export interface SessionEntity {
   id: string;
   user: User;
 }

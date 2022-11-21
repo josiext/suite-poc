@@ -21,7 +21,7 @@ export const ProductDrawer = ({ onLogout }: any) => {
       <div style={{ display: "flex", gap: 24 }}>
         <a href={APP_URLS.PLATFORM}>Home</a>
         <a href={APP_URLS.DMS}>DMS</a>
-        <a href={APP_URLS.PROJECT_MANAGER}>Project Manager</a>
+        <a href={APP_URLS.PROJECT_MANAGER}>Project Manager 2</a>
       </div>
 
       <div>

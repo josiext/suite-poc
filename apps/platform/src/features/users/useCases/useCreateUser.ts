@@ -1,6 +1,14 @@
 import { useEffect, useState } from "react";
 import { User } from "../domain/userType";
 
+export interface UserResponseType {
+  id: number;
+  name: string;
+  email: string;
+  email_verified_at: string;
+}
+
+
 export const useCreateUser = (data: User) => {
   const [user, setUser] = useState(null);
   const [error, setError] = useState(null);
@@ -11,15 +19,9 @@ export const useCreateUser = (data: User) => {
     createUser(data).catch(setError);
   }, [data]);
 
-  const createUser = async (userData: User) => {
-    const response = (await fetch("http://localhost:3000/users", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(userData),
-    })) as any;
-    const data = await response.json();
+  const createUser = async (userData: User) : Promise<UserResponseType> => {
+    const response = service...
+    const data : UserResponseType = response.map() 
     setUser(data);
   };
 
